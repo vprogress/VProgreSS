@@ -2,9 +2,9 @@
 
 
 <p align="center">
-<a href="https://github.com/priyanshumay"><img src="https://img.shields.io/badge/postgresql-6566ba.svg?style=for-the-badge&logo=postgresql&logoColor=6566ba&labelColor=ffffff" alt="postgresql"></a>
-<a href="https://github.com/priyanshumay"><img src="https://img.shields.io/badge/mysql-3aabe8.svg?style=for-the-badge&logo=mysql&logoColor=3aabe8&labelColor=ffffff" alt="mysql"></a>
-<a href="https://github.com/priyanshumay"><img src="https://img.shields.io/badge/sqlite-1daede.svg?style=for-the-badge&logo=sqlite&logoColor=1daede&labelColor=ffffff" alt="sqlite"></a>
+<a href="https://github.com/vprogress/VProgreSS"><img src="https://img.shields.io/badge/postgresql-6566ba.svg?style=for-the-badge&logo=postgresql&logoColor=6566ba&labelColor=ffffff" alt="postgresql"></a>
+<a href="https://github.com/vprogress/VProgreSS"><img src="https://img.shields.io/badge/mysql-3aabe8.svg?style=for-the-badge&logo=mysql&logoColor=3aabe8&labelColor=ffffff" alt="mysql"></a>
+<a href="https://github.com/vprogress/VProgreSS"><img src="https://img.shields.io/badge/sqlite-1daede.svg?style=for-the-badge&logo=sqlite&logoColor=1daede&labelColor=ffffff" alt="sqlite"></a>
 </p><br>
 
 vprogress is a ✨ special ✨ repository - y una empresa sin animo de lucro en donde nuestras habilidades de programacion nos demuestra la experiencia y la destreza en el desarrollo del proceso de software, llevando así estas practicas a la orientacion de productividad que con lleva a mediana y pequeñas micro empresas en la mision de consultorias e desarrollo de apis . 
