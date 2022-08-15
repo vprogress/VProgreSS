@@ -1,8 +1,16 @@
 ![perfil Github](https://user-images.githubusercontent.com/111246956/184704637-15d5b6b9-c64c-4aca-9572-ae5108f1ee20.jpg)
 
-![Java](https://img.shields.io/badge/-Java-000000?style=flat&logo=java)
 
+![GitHub](https://img.shields.io/badge/-GitHub-222222?style=flat&logo=github&logoColor=181717)
+
+
+![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
+![Java](https://img.shields.io/badge/-Java-000000?style=flat&logo=java)
+![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
+![Python](https://img.shields.io/badge/-Python-000000?style=flat&logo=python)
+  
 <p align="center">
+  
 <a> <img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/github.png" alt="github logo" width="34">](https://github.com/rotkill3r)> </a> 
 </p><br>
 <p align="center">
