@@ -1,2 +1,2 @@
 let wow = parseint(prompt"como estan?");
- document.write(`Estoy bien ${wow})
+ document.write(`Estoy bien ${wow}`);
