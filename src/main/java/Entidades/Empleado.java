@@ -9,7 +9,7 @@ public class Empleado {
     private String administrativo;
     private String operativo;
 
-    public Empleado(String nombre, String apellido, String email, String empresa, String administrativo, String operativo) {
+    public Empleado (String nombre, String apellido, String email, String empresa, String administrativo, String operativo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
