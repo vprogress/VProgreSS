@@ -7,7 +7,7 @@ public class Empresa {
     private int Telefono;
     private String Nit;
 
-    public Empresa (String nombre, String direccion, int telefono, String nit) {
+    public Empresa(String nombre, String direccion, int telefono, String nit) {
         this.Nombre = nombre;
         this.Direccion = direccion;
         this.Telefono = telefono;

@@ -59,6 +59,7 @@ public class MovimientoDinero{
     public void setRegistroH(Time registroH) {
         this.registroH = registroH;
     }
+    // Metodo Para Eliminar 1 a la variable Monto
     public int monto(){
         return -1;
     }
