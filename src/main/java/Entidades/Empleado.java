@@ -6,16 +6,16 @@ public class Empleado {
     private String apellido;
     private String email;
     private String empresa;
-    private String administrativo;
-    private String operativo;
+    private boolean operativo;
+    private boolean administrativo;
 
-    public Empleado(String nombre, String apellido, String email, String empresa, String administrativo, String operativo) {
+    public Empleado(String nombre, String apellido, String email, String empresa, boolean operativo, boolean administrativo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.empresa = empresa;
-        this.administrativo = administrativo;
         this.operativo = operativo;
+        this.administrativo = administrativo;
     }
 
     public String getNombre() {
@@ -50,19 +50,19 @@ public class Empleado {
         this.empresa = empresa;
     }
 
-    public String getAdministrativo() {
-        return administrativo;
-    }
-
-    public void setAdministrativo(String administrativo) {
-        this.administrativo = administrativo;
-    }
-
-    public String getOperativo() {
+    public boolean getOperativo() {
         return operativo;
     }
 
-    public void setOperativo(String operativo) {
+    public void setOperativo(boolean operativo) {
         this.operativo = operativo;
+    }
+
+    public boolean getAdministrativo() {
+        return administrativo;
+    }
+
+    public void setAdministrativo(boolean administrativo) {
+        this.administrativo = administrativo;
     }
 }
