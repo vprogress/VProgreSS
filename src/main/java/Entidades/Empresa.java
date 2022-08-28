@@ -8,10 +8,13 @@ public class Empresa {
     private String Nit;
 
     public Empresa(String nombre, String direccion, int telefono, String nit) {
-        this.Nombre = nombre;
-        this.Direccion = direccion;
-        this.Telefono = telefono;
-        this.Nit = nit;
+        Nombre = nombre;
+        Direccion = direccion;
+        Telefono = telefono;
+        Nit = nit;
+    }
+
+    public Empresa() {
     }
 
     public String getNombre() {
@@ -45,5 +48,4 @@ public class Empresa {
     public void setNit(String nit) {
         this.Nit = nit;
     }
-
 }

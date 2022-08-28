@@ -3,45 +3,57 @@ package Entidades;
 import java.sql.Time;
 import java.util.Date;
 
-public class MovimientoDinero{
+public class MovimientoDinero {
 
-    private float monto;
-    //private int movimientoDinero
-    private float egresos;
-    private String concepto;
+    private int monto;
+    private double egresos;
+    private double ingresos;
+    private int identificacion;
     private Date registroD;
     private Time registroH;
 
-    public MovimientoDinero(float monto, float egresos, String concepto, Date registroD, Time registroH) {
+    public MovimientoDinero(int monto, double egresos, double ingresos, int identificacion, Date registroD, Time registroH) {
         this.monto = monto;
         this.egresos = egresos;
-        this.concepto = concepto;
+        this.ingresos = ingresos;
+        this.identificacion = identificacion;
         this.registroD = registroD;
         this.registroH = registroH;
     }
 
-    public float getMonto() {
+    public MovimientoDinero() {
+    }
+
+    public int getMonto() {
         return monto;
     }
 
-    public float getEgresos() {
-        return egresos;
-    }
-
-    public void setMonto(float monto) {
+    public void setMonto(int monto) {
         this.monto = monto;
     }
 
-    public void setEgresos(float egresos) {
+    public double getEgresos() {
+        return egresos;
+    }
+
+    public void setEgresos(double egresos) {
         this.egresos = egresos;
     }
 
-    public String getConcepto() {
-        return concepto;
+    public double getIngresos() {
+        return ingresos;
     }
 
-    public void setConcepto(String concepto) {
-        this.concepto = concepto;
+    public void setIngresos(double ingresos) {
+        this.ingresos = ingresos;
+    }
+
+    public int getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(int identificacion) {
+        this.identificacion = identificacion;
     }
 
     public Date getRegistroD() {
@@ -58,12 +70,5 @@ public class MovimientoDinero{
 
     public void setRegistroH(Time registroH) {
         this.registroH = registroH;
-    }
-    // Metodo Para Eliminar 1 a la variable Monto
-    public int monto(){
-        return -1;
-    }
-    public String usuario(){
-        return "-1";
     }
 }
