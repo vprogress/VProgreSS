@@ -21,6 +21,9 @@ public class MovimientoDinero {
         this.registroH = registroH;
     }
 
+    public MovimientoDinero() {
+    }
+
     public int getMonto() {
         return monto;
     }

@@ -1,6 +1,8 @@
 package com.VProgreSS.demo;
 
+import Entidades.Empleado;
 import Entidades.Empresa;
+import Entidades.MovimientoDinero;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,7 +13,12 @@ public class VProgressApplication {
 		SpringApplication.run(VProgressApplication.class, args);
 	}
 
-	Empresa empresa = new Empresa();
+Empresa miEmpresa = new Empresa();
+Empleado miEmpleado = new Empleado();
+MovimientoDinero UnMovimiento = new MovimientoDinero();
+
+
 
 
 }
+

@@ -18,6 +18,9 @@ public class Empleado {
         this.administrativo = administrativo;
     }
 
+    public Empleado() {
+    }
+
     public String getNombre() {
         return nombre;
     }
