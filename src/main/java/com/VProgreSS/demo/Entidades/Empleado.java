@@ -1,15 +1,28 @@
-package Entidades;
+package com.VProgreSS.demo.Entidades;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="Empleados")
 public class Empleado {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int codempleado;
+    @Column(nullable = false, length = 30)
     private String nombre;
+    @Column(nullable = false, length = 30)
     private String apellido;
+    @Column(nullable = false, length = 30)
     private String email;
+    @Column(nullable = false, length = 30)
     private String empresa;
+    @Column(nullable = false)
     private boolean operativo;
+    @Column(nullable = false)
     private boolean administrativo;
 
-    public Empleado(String nombre, String apellido, String email, String empresa, boolean operativo, boolean administrativo) {
+    public Empleado(int codempleado, String nombre, String apellido, String email, String empresa, boolean operativo, boolean administrativo) {
+        this.codempleado = codempleado;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
@@ -19,6 +32,14 @@ public class Empleado {
     }
 
     public Empleado() {
+    }
+
+    public int getCodempleado() {
+        return codempleado;
+    }
+
+    public void setCodempleado(int codempleado) {
+        this.codempleado = codempleado;
     }
 
     public String getNombre() {

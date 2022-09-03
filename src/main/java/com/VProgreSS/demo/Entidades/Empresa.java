@@ -1,17 +1,30 @@
-package Entidades;
+package com.VProgreSS.demo.Entidades;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Empresa")
 public class Empresa {
 
-    private String Nombre;
-    private String Direccion;
-    private int Telefono;
+    @Id
     private String Nit;
+    @Column(nullable = false, length = 30)
+    private String Nombre;
+    @Column(nullable = false, length = 30)
+    private String Direccion;
+    @Column(nullable = false)
+    private int Telefono;
 
-    public Empresa(String nombre, String direccion, int telefono, String nit) {
+
+    public Empresa(String nit, String nombre, String direccion, int telefono) {
+        Nit = nit;
         Nombre = nombre;
         Direccion = direccion;
         Telefono = telefono;
-        Nit = nit;
+
     }
 
     public Empresa() {

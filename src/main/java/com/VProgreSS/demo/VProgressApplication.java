@@ -1,8 +1,8 @@
 package com.VProgreSS.demo;
 
-import Entidades.Empleado;
-import Entidades.Empresa;
-import Entidades.MovimientoDinero;
+import com.VProgreSS.demo.Entidades.Empleado;
+import com.VProgreSS.demo.Entidades.Empresa;
+import com.VProgreSS.demo.Entidades.MovimientoDinero;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
