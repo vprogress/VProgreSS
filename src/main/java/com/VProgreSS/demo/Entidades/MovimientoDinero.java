@@ -1,87 +1,40 @@
 package com.VProgreSS.demo.Entidades;
 
-import javax.persistence.*;
-import java.sql.Time;
-import java.util.Date;
-import java.time.*; // Este paquete contiene LocalDate, LocalTime y LocalDateTime.
-import java.time.format.*;  // Este paquete contiene DateTimeFormatter.
-@Entity
-@Table(name="Movimientos_Dinero")
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
-public class MovimientoDinero {
+import javax.persistence.*;
+
+import java.time.LocalDate;
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+@Table(name = "MovimientoDinero")
+//@JsonIgnoreProperties({"empleado"})
+public class MovimientoDinero{
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String codMovDinero;
-    @Column(nullable = false, length = 30)
-    private int monto;
-    @Column(nullable = false, length = 30)
-    private double egresos;
-    @Column(nullable = false, length = 30)
-    private double ingresos;
-    @Column(nullable = false, length = 30)
-    private int identificacion;
-    @Column(nullable = false, length = 50)
-    private LocalDateTime registroDyH;
+    @Column(name = "MovimiendoDinero_id")
+    private long id;
 
-    public MovimientoDinero(String codMovDinero, int monto, double egresos, double ingresos, int identificacion, LocalDateTime registroDyH) {
-        this.codMovDinero = codMovDinero;
-        this.egresos = egresos;
-        this.ingresos = ingresos;
-        this.identificacion = identificacion;
-        this.registroDyH = registroDyH;
+    @Column(name = "nombre")
+    private String nombre;
+    @Column(name = "monto")
+    private float monto;
+    @Column(name = "egresos")
+    private float egresos;
 
-    }
+    @Column(name = "registro")
+    private LocalDate registro;
 
-    //registroDyH = LocalTime.now();
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Empleado.class)
+    @JoinColumn(name ="empleado_id")
+    private Empleado empleado;
 
-    public MovimientoDinero() {
-    }
-
-    public String getCodMovDinero() {
-        return codMovDinero;
-    }
-
-    public void setCodMovDinero(String codMovDinero) {
-        this.codMovDinero = codMovDinero;
-    }
-    public int getMonto() {
-        return monto;
-    }
-
-    public void setMonto(int monto) {
-        this.monto = monto;
-    }
-
-    public double getEgresos() {
-        return egresos;
-    }
-
-    public void setEgresos(double egresos) {
-        this.egresos = egresos;
-    }
-
-    public double getIngresos() {
-        return ingresos;
-    }
-
-    public void setIngresos(double ingresos) {
-        this.ingresos = ingresos;
-    }
-
-    public int getIdentificacion() {
-        return identificacion;
-    }
-
-    public void setIdentificacion(int identificacion) {
-        this.identificacion = identificacion;
-    }
-
-        public LocalDateTime getRegistroDyH() {
-        return registroDyH;
-    }
-
-    public void setRegistroDyH(LocalDateTime registroDyH) {
-        this.registroDyH = registroDyH;
-    }
 
 }

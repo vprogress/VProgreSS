@@ -1,33 +1,17 @@
-package com.VProgreSS.demo.Entidades;
+package Entidades;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="Empresa")
 public class Empresa {
 
-    @Id
-    private String Nit;
-    @Column(nullable = false, length = 30)
     private String Nombre;
-    @Column(nullable = false, length = 30)
     private String Direccion;
-    @Column(nullable = false)
     private int Telefono;
+    private String Nit;
 
-
-    public Empresa(String nit, String nombre, String direccion, int telefono) {
-        Nit = nit;
-        Nombre = nombre;
-        Direccion = direccion;
-        Telefono = telefono;
-
-    }
-
-    public Empresa() {
+    public Empresa(String nombre, String direccion, int telefono, String nit) {
+        this.Nombre = nombre;
+        this.Direccion = direccion;
+        this.Telefono = telefono;
+        this.Nit = nit;
     }
 
     public String getNombre() {
@@ -61,5 +45,5 @@ public class Empresa {
     public void setNit(String nit) {
         this.Nit = nit;
     }
-}
 
+}
