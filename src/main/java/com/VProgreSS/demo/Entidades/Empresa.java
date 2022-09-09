@@ -1,65 +1,33 @@
 package com.VProgreSS.demo.Entidades;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+import lombok.*;
+// Marco de trabajo
 @Entity
-@Table(name="Empresa")
+//Constructores
+@AllArgsConstructor
+//Para no incluir los constructores en la clase
+@NoArgsConstructor
+//Getters and setters
+@Getter
+@Setter
+//
+@ToString
+@Table(name = "empresas")
+//Declaracion de variables y Tabla empleado
 public class Empresa {
-
     @Id
-    private String Nit;
-    @Column(nullable = false, length = 30)
-    private String Nombre;
-    @Column(nullable = false, length = 30)
-    private String Direccion;
-    @Column(nullable = false)
-    private int Telefono;
+    @Column(name = "nombre")
+    private String nombre;
+    @Column(name = "direccion")
+    private String direccion;
+    @Column(name = "telefono")
+    private int telefono;
+    @Column(name = "nit")
+    private String nit;
 
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Empleado.class)
+    private Empleado empleado;
 
-    public Empresa(String nit, String nombre, String direccion, int telefono) {
-        Nit = nit;
-        Nombre = nombre;
-        Direccion = direccion;
-        Telefono = telefono;
-
-    }
-
-    public Empresa() {
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.Nombre = nombre;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.Direccion = direccion;
-    }
-
-    public int getTelefono() {
-        return Telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.Telefono = telefono;
-    }
-
-    public String getNit() {
-        return Nit;
-    }
-
-    public void setNit(String nit) {
-        this.Nit = nit;
-    }
 }
-
