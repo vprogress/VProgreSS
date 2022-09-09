@@ -1,49 +1,33 @@
-package Entidades;
+package com.VProgreSS.demo.Entidades;
 
+import javax.persistence.*;
+
+import lombok.*;
+// Marco de trabajo
+@Entity
+//Constructores
+@AllArgsConstructor
+//Para no incluir los constructores en la clase
+@NoArgsConstructor
+//Getters and setters
+@Getter
+@Setter
+//
+@ToString
+@Table(name = "empresas")
+//Declaracion de variables y Tabla empleado
 public class Empresa {
+    @Id
+    @Column(name = "nombre")
+    private String nombre;
+    @Column(name = "direccion")
+    private String direccion;
+    @Column(name = "telefono")
+    private int telefono;
+    @Column(name = "nit")
+    private String nit;
 
-    private String Nombre;
-    private String Direccion;
-    private int Telefono;
-    private String Nit;
-
-    public Empresa(String nombre, String direccion, int telefono, String nit) {
-        this.Nombre = nombre;
-        this.Direccion = direccion;
-        this.Telefono = telefono;
-        this.Nit = nit;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.Nombre = nombre;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.Direccion = direccion;
-    }
-
-    public int getTelefono() {
-        return Telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.Telefono = telefono;
-    }
-
-    public String getNit() {
-        return Nit;
-    }
-
-    public void setNit(String nit) {
-        this.Nit = nit;
-    }
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Empleado.class)
+    private Empleado empleado;
 
 }

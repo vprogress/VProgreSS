@@ -1,6 +1,6 @@
 package com.VProgreSS.demo.Repositorio;
 
-import com.VProgreSS.demo.Entities.Empleado;
+import com.VProgreSS.demo.Entidades.Empleado;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
