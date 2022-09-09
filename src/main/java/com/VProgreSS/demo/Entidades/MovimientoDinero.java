@@ -1,10 +1,9 @@
 package com.VProgreSS.demo.Entidades;
 
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
-
 import java.time.LocalDate;
 
 @Entity
@@ -14,7 +13,7 @@ import java.time.LocalDate;
 @Setter
 @ToString
 @Table(name = "MovimientoDinero")
-//@JsonIgnoreProperties({"empleado"})
+@JsonIgnoreProperties({"empleado"})
 public class MovimientoDinero{
 
     @Id
