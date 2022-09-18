@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/CSS/StyleLogin.css">
+
+    <link rel="icon" type="image/png" sizes="16x16"  href="/IMG/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Inicar sesion</title>
+</head>
+<body>
+    <h1>Iniciar Sesion</h1>
+
+    <section id="Login">
+
+        <div id="Superadministrador">
+            <div class="titulos">
+                <h2>
+                    Superadministrador
+                </h2>
+            </div>
+
+            <button onclick="Superadministrador(1)" class="botoneslogin" >
+                <img id="imagenFondo1" src="/IMG/Superadministrador.png" alt="">
+            </button>
+
+            <div id="FondoArribaSuperadministrador">
+                <p>
+                    Rol: Superadministrador
+                </p>
+    
+                <form action="">
+                    <input type="email" id="Usuario" name="usuario" placeholder="Usuario">
+    
+                    <input type="password" id="pastword" name="E-mail" placeholder="Contraseña">
+        
+                    <button class="Olvidar">¿Olvidaste tu Contraseña?</button>
+        
+                    <button type="submit" value="Submit">
+                        Iniciar
+                    </button>
+                </form> 
+            </div>
+        </div>
+
+        <div id="Administrador">
+            <div class="titulos">
+                <h2>
+                    Administrador
+                </h2>
+            </div>
+
+            <button onclick="Superadministrador(2)" class="botoneslogin">
+                <img id="imagenFondo2" src="/IMG/Administrador.png" alt="">
+            </button>
+            
+
+            <div id="FondoArribaAdministrador">
+                <p>
+                    Rol: Administrador
+                </p>
+    
+                <form action="">
+                    <input type="email" id="Usuario" name="usuario" placeholder="Usuario">
+    
+                    <input type="password" id="pastword" name="E-mail" placeholder="Contraseña">
+        
+                    <button class="Olvidar">¿Olvidaste tu Contraseña?</button>
+        
+                    <button type="submit" value="Submit">
+                        Iniciar
+                    </button>
+                </form> 
+            </div>
+        </div>
+
+        <div id="Empleado">
+            <div class="titulos">
+                <h2>
+                    Empleado
+                </h2>
+            </div>
+
+            <button onclick="Superadministrador(3)" class="botoneslogin">
+                <img id="imagenFondo3" src="/IMG/Empleados.png" alt="">
+            </button>
+
+            <div id="FondoArribaEmpleado">
+                <p>
+                    Rol: Empleado
+                </p>
+    
+                <form action="">
+                    <input type="email" id="Usuario" name="usuario" placeholder="Usuario">
+    
+                    <input type="password" id="pastword" name="E-mail" placeholder="Contraseña">
+        
+                    <button class="Olvidar">¿Olvidaste tu Contraseña?</button>
+        
+                    <button type="submit" value="Submit">
+                        Iniciar
+                    </button>
+                </form> 
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/JS/bd.js.JS"></script>
+    <script src="/JS/Js.js"></script>
+</body>
+</html>
