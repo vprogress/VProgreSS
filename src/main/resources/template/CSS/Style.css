@@ -69,6 +69,13 @@ header a:hover{
     color: #7839B3;
 }
 
+#Hamburguesa{
+    display: none;
+}
+
+.Menu-hamburguesa-pop-up{
+    display: none;
+}
 /*FIN MENU*/
 
 /*BANNER*/
