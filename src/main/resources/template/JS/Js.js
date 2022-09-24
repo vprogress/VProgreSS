@@ -53,11 +53,11 @@ function Plataforma1(){
 }
 
 function Plataforma2(){
-    alert("Correcto", window.location.href = "http://127.0.0.1:5500/NuevoAdministrador.html")
+    alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaAdministrador.html")
 }
 
 function Plataforma3(){
-    alert("Correcto", window.location.href = "http://127.0.0.1:5500/NuevoEmpleado.html")
+    alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaEmpleado.html")
 }
 
 //Plataformas

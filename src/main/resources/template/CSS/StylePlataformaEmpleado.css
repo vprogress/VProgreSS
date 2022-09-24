@@ -103,3 +103,221 @@ td{
     color: white;
     font-family: Made Tommy-Black;
 }
+
+
+/*RESPONSIVE*/
+@media screen and (max-width:768px){
+    @font-face {
+        font-family: Made Tommy-Black;
+        src: url(/MADE\ TOMMY\ Black_PERSONAL\ USE.otf);
+    }
+
+    @font-face {
+        font-family: Made Tommy-Thin;
+        src: url(/MADE\ TOMMY\ Thin_PERSONAL\ USE.otf);
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-family: Made Tommy-Black;
+        color: #4E14A8;
+    }
+
+    p{
+        font-family: Made Tommy-Thin;
+    }
+
+    *{
+        margin: 0px;
+    }
+
+    body{
+        background-color: #ffffff;
+    }
+
+    #Barra{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #86868720;
+        padding: 15px 50px;
+    }
+
+    .container{
+        max-width: 1200px;
+        margin: 0px 20px;
+    }
+
+    h1{
+        margin: 50px 0px;
+    }
+
+    #nuevo{
+        border: 0px;
+        background-color: #7839B250;
+        color: white;
+        padding: 8px 30px;
+        font-size: 20px;
+        display: flex;
+        margin-left: auto;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    table, th, td {
+      border:2px solid black;
+      margin: auto;
+    }
+
+    table{
+        width: 100%;
+        height: 400px;
+    }
+
+    th{
+        padding: 10px;
+        font-size: 20px;
+        color: #4E14A8;
+        font-family: Made Tommy-Black;
+    }
+
+    td{
+        padding: 10px;
+    }
+
+    .CambioColor{
+        background-color: #7839B250;
+    }
+
+    #Flecha{
+        cursor: pointer;
+    }
+
+    .SectionDeCalculo{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 20px;
+
+    }
+
+    .SectionDeCalculo p{
+        font-family: Made Tommy-Black;
+        color: #4E14A8;
+        margin: 10px;
+    }
+
+    #Pantalla{
+        background-color: #7839B250;
+        padding: 10px;
+        color: white;
+        font-family: Made Tommy-Black;
+    }
+}
+
+@media screen and (max-width:320px){
+    @font-face {
+        font-family: Made Tommy-Black;
+        src: url(/MADE\ TOMMY\ Black_PERSONAL\ USE.otf);
+    }
+
+    @font-face {
+        font-family: Made Tommy-Thin;
+        src: url(/MADE\ TOMMY\ Thin_PERSONAL\ USE.otf);
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-family: Made Tommy-Black;
+        color: #4E14A8;
+    }
+
+    p{
+        font-family: Made Tommy-Thin;
+    }
+
+    *{
+        margin: 0px;
+    }
+
+    body{
+        background-color: #ffffff;
+    }
+
+    #Barra{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #86868720;
+        padding: 15px 50px;
+    }
+
+    .container{
+        max-width: 1200px;
+        margin: 0px 20px;
+    }
+
+    h1{
+        margin: 50px 0px;
+    }
+
+    #nuevo{
+        border: 0px;
+        background-color: #7839B250;
+        color: white;
+        padding: 8px 30px;
+        font-size: 20px;
+        display: flex;
+        margin-left: auto;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    table, th, td {
+      border:2px solid black;
+      margin: auto;
+    }
+
+    table{
+        width: 100%;
+        height: 400px;
+    }
+
+    th{
+        padding: 5px;
+        font-size: 10px;
+        color: #4E14A8;
+        font-family: Made Tommy-Black;
+    }
+
+    td{
+        padding: 10px;
+    }
+
+    .CambioColor{
+        background-color: #7839B250;
+    }
+
+    #Flecha{
+        cursor: pointer;
+    }
+
+    .SectionDeCalculo{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 20px;
+
+    }
+
+    .SectionDeCalculo p{
+        font-family: Made Tommy-Black;
+        color: #4E14A8;
+        margin: 10px;
+    }
+
+    #Pantalla{
+        background-color: #7839B250;
+        padding: 10px;
+        color: white;
+        font-family: Made Tommy-Black;
+    }
+}
