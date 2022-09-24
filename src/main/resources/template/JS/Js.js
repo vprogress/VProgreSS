@@ -73,3 +73,17 @@ function Nuevo2(){
 function Nuevo3(){
     alert("Correcto", window.location.href = "http://127.0.0.1:5500/NuevoEmpleado.html")
 }
+
+//HAMBURGUESA
+let menu = document.getElementsByClassName("Menu-hamburguesa-pop-up")
+
+function menuhamburguesa(){
+    menu[0].style.display = "block"
+    body[0].style.overflow = "hidden"
+}
+function cerrarmenu(){
+    menu[0].style.display = "none"
+    body[0].style.overflow = "auto"
+}
+
+//FIN HAMBURGUESA
