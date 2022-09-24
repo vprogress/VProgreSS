@@ -49,15 +49,42 @@ function Superadministrador(i){
 }
 
 function Plataforma1(){
-    alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaSuperadministrador.html")
+    const usuario = document.getElementById("Usuario")
+    const contraseña = document.getElementById("pastword")
+    console.log(usuario.value)
+
+    if(usuario.value === contraseña.value){
+        alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaSuperadministrador.html")
+    }
+    else{
+        alert("¡Error! Los datos son incorrectos")
+    }
 }
 
 function Plataforma2(){
-    alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaAdministrador.html")
+    const usuario = document.getElementById("Usuario")
+    const contraseña = document.getElementById("pastword")
+    console.log(usuario.value)
+
+    if(usuario.value === contraseña.value){
+        alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaAdministrador.html")
+    }
+    else{
+        alert("¡Error! Los datos son incorrectos")
+    }
 }
 
 function Plataforma3(){
-    alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaEmpleado.html")
+    const usuario = document.getElementById("Usuario")
+    const contraseña = document.getElementById("pastword")
+    console.log(usuario.value)
+
+    if(usuario.value === contraseña.value){
+        alert("Correcto", window.location.href = "http://127.0.0.1:5500/plataformaEmpleado.html")
+    }
+    else{
+        alert("¡Error! Los datos son incorrectos")
+    }
 }
 
 //Plataformas
