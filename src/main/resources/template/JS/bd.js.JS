@@ -25,13 +25,13 @@ let Imagenes = [
     
     {
         id : "Maria",
-        src : "/IMG/Nelson2.png",
+        src : "/IMG/Maria2.png",
         texto : "HOLA! <br> Soy Maria <br> Soy Administradora configuración."
     },
 
     {
         id : "Shaiel",
-        src : "/IMG/Nelson2.png",
+        src : "/IMG/Shaiel2.png",
         texto : "HOLA! <br> Soy Shaiel <br> Soy Tester."
     }
 ]
