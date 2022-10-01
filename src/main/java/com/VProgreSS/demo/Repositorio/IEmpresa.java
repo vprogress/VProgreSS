@@ -8,7 +8,4 @@ import java.util.List;
 
 @Repository
 public interface IEmpresa extends JpaRepository<Empresa,Long> {
-
-    @Override
-    List<Empresa> findAll();
 }

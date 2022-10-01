@@ -1,44 +1,72 @@
 package com.VProgreSS.demo.Controlador;
 
 import com.VProgreSS.demo.Entidades.MovimientoDinero;
-import com.VProgreSS.demo.Servicios.MovimientoDineroService;
 
+import com.VProgreSS.demo.Entidades.ObjetivoVpro;
+import com.VProgreSS.demo.Servicios.ServiceIMovimientoDinero;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class MovimientoDineroController {
+    //Hacemos la inyeccion del objeto de tipo ServiceInterfaceTransaction
+    @Autowired
+    ServiceIMovimientoDinero serviceIMovimientoDinero;
 
-    MovimientoDineroService service;
+    //Creamos los Mapping
 
-    public MovimientoDineroController(MovimientoDineroService services) {
-        this.service = services;
+    //Mapping para listar Transaction
+    @GetMapping("/ListTransaction")
+    public ResponseEntity<List<MovimientoDinero>> getTransaction(){
+        return new ResponseEntity<>(serviceIMovimientoDinero.getTransaction(), HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("/movimientoDinero")
-    public List<MovimientoDinero> getMovimientoDinero(){
-        return this.service.getMovimientoDinero();
+    //Mapping para traer una sola Transaction
+    @GetMapping("/OneTransaction/{idTransaction}")
+    public ResponseEntity<Object> getTransactionPath(@PathVariable Long idTransaction){
+        try {
+            MovimientoDinero movimientoDineroX = serviceIMovimientoDinero.getOnlyOneTransaction(idTransaction);
+            return new ResponseEntity<>(movimientoDineroX,HttpStatus.OK);
+        }catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    @GetMapping("/movimientoDinero/{id}")
-    public MovimientoDinero getMovimientoDinero(@PathVariable("id") long id) {
-        return this.service.getMovimientoDinero(id);
-
+    //Mapping para crear una Transaction
+    @PostMapping("/CreateTransaction")
+    public ResponseEntity<String> PostCreateTransaction(@RequestBody MovimientoDinero movimientoDineroX){
+        try {
+            String message = serviceIMovimientoDinero.setCreateTransaction(movimientoDineroX);
+            return new ResponseEntity<>(message,HttpStatus.OK);
+        }catch (Exception e){
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    @PostMapping("/movimientoDineros")
-    public MovimientoDinero createInvoice(@RequestBody MovimientoDinero movimientoDinero){
-        return  this.service.createMovimientoDinero(movimientoDinero);
+    //Mapping para actualizar una Transaction
+    @PutMapping("/UpdateTransaction")
+    public ResponseEntity<ObjetivoVpro> putUpdateTransaction(@RequestBody MovimientoDinero movimientoDineroX){
+        try {
+            MovimientoDinero movimientoDineroBD = serviceIMovimientoDinero.getUpdateTransaction(movimientoDineroX);
+            return new ResponseEntity<>(new ObjetivoVpro("Atualizacion de Transaction Exitosa", movimientoDineroBD),HttpStatus.OK);
+        }catch (Exception e){
+            return new ResponseEntity<>(new ObjetivoVpro(e.getMessage(),null),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    @PutMapping("/movimientoDinero/{id}")
-    public MovimientoDinero updateUser(@PathVariable("id") long id, @RequestBody MovimientoDinero movimientoDinero){
-        return this.service.updateMovimientoDinero(id,movimientoDinero);
-    }
-
-    @DeleteMapping("/movimientoDinero/{id}")
-    public Boolean deleteMovimientoDinero(@PathVariable("id") long id){
-        return this.service.deleteMovimientoDinero(id);
+    //Mapping para eliminar una Transaction
+    @DeleteMapping("/DeleteTransaction/{idTransaction}")
+    public ResponseEntity<String> DeleteTransaction(@PathVariable Long idTransaction){
+        try {
+            String message = serviceIMovimientoDinero.getDeleteTransaction(idTransaction);
+            return new ResponseEntity<>(message,HttpStatus.OK);
+        }catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 
     }
 }

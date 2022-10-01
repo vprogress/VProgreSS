@@ -1,44 +1,125 @@
 package com.VProgreSS.demo.Entidades;
 
-import lombok.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-
-@Table(name = "empleados")
-public class Empleado{
-
+@Table(name="Employees")
+public class Empleado {
+    //Atributes
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Empleado_id", nullable = false)
-    private long id;
+    private Long idEmployee;
 
-    @Column(name= "cedula")
-    private long cedula;
-    @Column(name= "nombre")
-    private String nombre;
-    @Column(name= "genero")
-    private String genero;
-    @Column(name= "edad")
-    private String edad;
-    @Column(name= "direccion")
-    private String direccion;
-    @Column(name= "correo")
-    private String correo;
+    @Column
+    private String nameEmployee;
+    @Column
+    private String phoneEmployee;
+    @Column
+    private String emailEmployee;
 
-    //Relacion ->
     @Enumerated(EnumType.STRING)
-    @Column(name = "empleado")
-    private Empleado empleado;
+    @ElementCollection(targetClass = Perfil.class,fetch = FetchType.EAGER)
+    private List<Perfil> perfilEmployee;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @ManyToOne
+    private Empresa empresaEmployee;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @OneToMany
+    private List<MovimientoDinero> movimientoDineros;
+    @Column
+    private Date updatedAtEmployee;
+    @Column
+    private java.sql.Date createdAtEmployee;
 
-    @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL)
-    private List<MovimientoDinero> MovimientoDineros;
+    //Contructor
 
 
+    public Empleado(Long idEmployee, String nameEmployee, String phoneEmployee, String emailEmployee, Date updatedAtEmployee, java.sql.Date createdAtEmployee) {
+        this.idEmployee = idEmployee;
+        this.nameEmployee = nameEmployee;
+        this.phoneEmployee = phoneEmployee;
+        this.emailEmployee = emailEmployee;
+        this.updatedAtEmployee = updatedAtEmployee;
+        this.createdAtEmployee = createdAtEmployee;
+    }
+
+    //Constructor Empty
+    public Empleado() {
+    }
+
+    //Setters and Getters
+
+    public Long getIdEmployee() {
+        return idEmployee;
+    }
+
+    public void setIdEmployee(Long idEmployee) {
+        this.idEmployee = idEmployee;
+    }
+
+    public String getNameEmployee() {
+        return nameEmployee;
+    }
+
+    public void setNameEmployee(String nameEmployee) {
+        this.nameEmployee = nameEmployee;
+    }
+
+    public String getPhoneEmployee() {
+        return phoneEmployee;
+    }
+
+    public void setPhoneEmployee(String phoneEmployee) {
+        this.phoneEmployee = phoneEmployee;
+    }
+
+    public String getEmailEmployee() {
+        return emailEmployee;
+    }
+
+    public void setEmailEmployee(String emailEmployee) {
+        this.emailEmployee = emailEmployee;
+    }
+
+    public List<Perfil> getRolesEmployee() {
+        return perfilEmployee;
+    }
+
+    public void setRolesEmployee(List<Perfil> perfilEmployee) {
+        this.perfilEmployee = perfilEmployee;
+    }
+
+    public Empresa getEnterpriseEmployee() {
+        return empresaEmployee;
+    }
+
+    public void setEnterpriseEmployee(Empresa empresaEmployee) {
+        this.empresaEmployee = empresaEmployee;
+    }
+
+    public List<MovimientoDinero> getTransactions() {
+        return movimientoDineros;
+    }
+
+    public void setTransactions(List<MovimientoDinero> movimientoDineros) {
+        this.movimientoDineros = movimientoDineros;
+    }
+
+    public Date getUpdatedAtEmployee() {
+        return updatedAtEmployee;
+    }
+
+    public void setUpdatedAtEmployee(Date updatedAtEmployee) {
+        this.updatedAtEmployee = updatedAtEmployee;
+    }
+
+    public java.sql.Date getCreatedAtEmployee() {
+        return createdAtEmployee;
+    }
+
+    public void setCreatedAtEmployee(java.sql.Date createdAtEmployee) {
+        this.createdAtEmployee = createdAtEmployee;
+    }
 }
-
