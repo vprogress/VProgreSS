@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LISTA DE EMPRESAS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body style="background:#7839B220">
+<main>
+    <h3  style="background-color: #7839B2;color: black;font-size: 400%; text-align: center;">LISTA DE EMPRESAS</h3>
+    <table style="text-align: center;">
+        <thead>
+        <tr>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Id Empresa</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Nombre Empresa</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Nit Empresa</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Telefono</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Direccion</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Fecha Creacion Empresa</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Fecha Actualizacion Empresa</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Empleados</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Editar</th>
+            <th style="background-color: #7839B250; padding:20px; text-aling : center" scope="col">Borrar</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        <tr th:each="Enterprise : ${Enterprise}">
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px" th:text="${Enterprise.idEnterprise}"></td>
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px" th:text="${Enterprise.nameEnterprise}"></td>
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px" th:text="${Enterprise.NITEnterprise}"></td>
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px" th:text="${Enterprise.phoneEnterprise}"></td>
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px" th:text="${Enterprise.addressEnterprise}"></td>
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px" th:text="${Enterprise.createdAtEnterprise}"></td>
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px" th:text="${Enterprise.updatedAtEnterprise}"></td>
+
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px">
+                <div>
+                    <form th:action="@{/EmployeeOfEnterpriseBD/{idEnterprise}(idEnterprise=${Enterprise.idEnterprise})}" th:method="get">
+                        <button type="submit" class="btn btn-outline-primary" style=" color : black !important; width: 110px; border-radius: 25px;margin-top: 10px; margin-bottom: 10px;">Empleados</button>
+                    </form>
+                </div>
+            </td>
+
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px">
+                <div >
+                    <form th:action="@{/updateEnterpriseBD/{idEnterprise}(idEnterprise=${Enterprise.idEnterprise})}" th:method="get">
+                        <button type="submit" class="btn btn-outline-primary" style=" color : black !important; width: 110px; border-radius: 25px;margin-top: 10px; margin-bottom: 10px;">Editar</button>
+                    </form>
+                </div>
+            </td>
+
+            <td style="background-color: #7839B2; padding:20px; text-aling : center; font-size: 29px">
+                <div >
+                    <form th:action="@{/deleteEnterpriseBD/{idEnterprise}(idEnterprise=${Enterprise.idEnterprise})}" th:method="delete">
+                        <button type="submit" class="btn btn-outline-danger" style=" color : black !important; width: 110px; border-radius: 25px;margin-top: 10px; margin-bottom: 10px;">Delete</button>
+                    </form>
+                </div>
+            </td>
+
+
+        </tr>
+        <div >
+            <a class="btn btn-outline-primary" style="width: 350px; border-radius: 25px;margin-top: 10px; margin-bottom: 10px; margin-left: 35%;" href="http://localhost:8080/WelcomeEnterprise" >Regresar a la pagina de inicio</a>
+        </div>
+
+        </tbody>
+    </table>
+
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

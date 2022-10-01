@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Register Company</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body style="background:#7839B220">
+<main>
+  <form method="POST" action="#" th:object="${EnterpriseUpdate}"  th:action="@{/updateEnterpriseBD}">
+    <div class="position-relative text-center">
+      <div class="position-absolute top-50 start-50 translate-middle-x" >
+                <span>
+                    <img style="margin:10px" src="../static/Logo2.png" alt="logo">
+                </span>
+        <div class="text-md">
+          <h3> ACTUALIZA  TUS DATOS </h3>
+        </div>
+
+        <div >
+          <b><label for="idEnterprise" class="form-label">Id de la Empresa</label></b>
+          <input type="text" class="form-control" th:value="*{idEnterprise}"  th:field="*{idEnterprise}" id="idEnterprise" placeholder="Enter  idEnterprise">
+
+          <b><label for="nameEnterprise" class="form-label">Nombre de la Empresa</label></b>
+          <input type="text" class="form-control" th:value="*{nameEnterprise}"  th:field="*{nameEnterprise}" id="nameEnterprise" placeholder="Enter name of Enterprise">
+        </div>
+
+        <div class="col -12">
+          <b><label for="NITEnterprise" class="form-label">NIT de la Empresa</label></b>
+          <input type="text" class="form-control" th:value="*{NITEnterprise}"  th:field="*{NITEnterprise}" id="NITEnterprise" placeholder="Enter NIT of Enterprise">
+        </div>
+
+        <div class="col -12">
+          <b><label for="phoneEnterprise" class="form-label">Telefono de la Empresa</label></b>
+          <input type="text" class="form-control"  th:value="*{phoneEnterprise}"  th:field="*{phoneEnterprise}" id="phoneEnterprise" placeholder="Enter  idEnterprise">
+        </div>
+
+        <div class="col -12">
+          <b><label for="addressEnterprise" class="form-label">Direccion de la Empresa</label></b>
+          <input type="text" class="form-control"  th:value="*{addressEnterprise}"  th:field="*{addressEnterprise}" id="addressEnterprise" placeholder="Enter  idEnterprise">
+        </div>
+
+        <form action="/action_page.php">
+          <b><label for="createdAtEnterprise">Fecha creacion de la Empresa):</label></b><br>
+          <input type="date" th:value="*{createdAtEnterprise}" th:field="*{createdAtEnterprise}" id="createdAtEnterprise" name="createdAtEnterprise">
+        </form>
+
+
+        <div class="col-lg-6 mx-auto mb-5 w-50 p-3">
+          <button class="btn btn-primary" type="submit">Actualizar Datos</button>
+        </div>
+        <div>
+          <p> Copyright Reserve Company 2022 </p>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

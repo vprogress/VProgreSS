@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body style="background:#7839B220">
+<main>
+    <form method="POST" th:object="${formUsersLogin}" th:action="@{/loginUser}">
+        <div class="position-relative text-center">
+            <div class="position-absolute top-50 start-50 translate-middle-x" >
+                <span>
+                    <img style="margin:10px" src="../static/Logo2.png" alt="logo">
+                </span>
+                <div class="text-md">
+                    <h3> INGRESA TUS DATOS </h3>
+                </div>
+                <div class="col -12">
+                    <b><label for="userApplication" class="form-label">Documento de identidad</label></b>
+                    <input type="text" class="form-control" th:field="*{userApplication}" id="userApplication" placeholder="Escribe aqui tu documento de identidad">
+
+                </div>
+                <br>
+                <div class="col - 12">
+                    <b><label for="passwordUser" class="form-label">Password</label></b>
+                    <input type="password" class="form-control" th:field="*{passwordUser}" id="passwordUser" placeholder="Escribe aqui tu passsword">
+
+                </div>
+                <div class="col-lg-6 mx-auto mb-4">
+                    <a href="http://localhost:8080/forgotPassword" id="flexCheckDefault" onclick="window.open(this.href, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=yes,fullscreen=no,scrollbars=no,dependent=no,width=700,left=10,height=700,top=10'); return false;">
+                        <label class="form-check-label"  for="flexCheckDefault">
+                            Forgot PASSWORD?
+                        </label>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-6 mx-auto mb-5 w-50 p-3">
+                    <button class="btn btn-primary" type="submit">Iniciar Sesión</button>
+                </div>
+                <div>
+                    <p> Copyright Reserve Company 2022 </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

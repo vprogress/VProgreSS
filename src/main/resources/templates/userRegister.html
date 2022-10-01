@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Registre La Compañia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body  style="background:#7839B220">
+<main>
+  <form method="POST" th:object="${formUserRegister}" th:action="@{/CreateUser}">
+    <div class="position-relative text-center">
+      <div class="position-absolute top-50 start-50 translate-middle-x" >
+          <span class="border border-5">
+              <img src="../static/Administrador.png" class="img-thumbnail" height="300" width="300">
+          </span>
+        <div class="text-md">
+          <h3> INGRESA TUS DATOS </h3>
+        </div>
+
+        <div class="col -12">
+          <b><label for="userApplication" class="form-label">Usuario</label></b>
+          <input type="text" class="form-control" th:field="*{userApplication}" id="userApplication" placeholder="Enter your User" required>
+        </div>
+
+        <div class="col - 12">
+          <b><label for="passwordUser" class="form-label">Password</label></b>
+          <input type="password" class="form-control" th:field="*{passwordUser}" id="passwordUser" placeholder="Enter your Password" required>
+        </div>
+
+        <div class="col - 12">
+          <b><label for="mailUser" class="form-label">Mail</label></b>
+          <input type="email" class="form-control" th:field="*{mailUser}" id="mailUser" placeholder="Enter your email" required>
+        </div>
+        <div>
+          <form style="margin-left: 25%;">
+            <b><label class="form-label">Rol</label></b>
+            <br>
+            <input type="radio" class="btn-check" th:field="*{rolUser}" id="Admin"  value="ADMIN" required>
+            <label class="btn btn-outline-primary" for="Admin">Administrativo</label>
+            <input type="radio" class="btn-check" th:field="*{rolUser}" id="Usuario"  value="USER" required>
+            <label class="btn btn-outline-primary" for="Usuario">Usuario</label><br>
+          </form>
+        </div>
+
+
+        <div class="col-lg-6 mx-auto mb-5 w-50 p-3">
+          <button class="btn btn-primary" type="submit">Crear Usuario</button>
+        </div>
+        <div>
+          <p> Copyright Reserve Company 2022 </p>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
